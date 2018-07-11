@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<title>Dashboard</title>
+	<style type="text/css">
+ 
+
+					.mySlides {display:none}
+					.w3-left, .w3-right, .w3-badge {cursor:pointer ;}
+					.w3-badge {height:13px;width:13px;padding:0; left: 10px;}
+
+					  .timeline {
+					  	margin-left: 90px;
+					  list-style-type: none;
+					  display: flex;
+					}
+
+					.li {
+					  transition: all 200ms ease-in;
+					}
+
+					.status {
+					  padding: 0px 40px;
+					  display: flex;
+					  justify-content: center;
+					  border-top: 2px solid #D6DCE0;
+					  position: relative;
+					  transition: all 200ms ease-in;
+					}
+					.status h5 {
+					  font-weight: 600;
+					}
+					.status:before {
+					  content: "";
+					  width: 25px;
+					  height: 25px;
+					  background-color: #959E9E;
+					  border-radius: 25px;
+					  border: 1px solid #ddd;
+					  position: absolute;
+					  top: -15px;	
+					  left: 40%;
+					  transition: all 200ms ease-in;
+					}
+
+					.li.complete .status {
+					  border-top: 2px solid #66DC71;
+					}
+					.li.complete .status:before {
+					  background-color: #66DC71;
+					  border: none;
+					  transition: all 200ms ease-in;
+					}
+					.li.complete .status h5 {
+					  color: #66DC71;
+					}
+					.footer{
+						position: fixed;
+					   left: 0;
+					   bottom: 0;
+					   width: 100%;
+					   background-color: #97EFEF;
+					   color: black;
+					}
+					
+						
+
+					
+	</style>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700,500'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+</head>
+<body>
+		<header style="position: relative;left: 0;top: 0;">
+			<img src="img/profile.png" height="60px" width="60px" style="margin-left: 93%;margin-top: 8%; position: absolute;">
+			<img src="img/notification.png" height="60px" width="60px" style="margin-left: 89%;margin-top: 8%; position: absolute;">
+			<img src="img/poly with circle.png" height="60px" width="60px" style="margin-left: 85%;margin-top: 8%; position: absolute;">
+			<img src="img/TOP BAND.png" height="180px" width="101.3%" style="margin-left: -10px;margin-top: -10px;">
+		</header>
+		<img src="img/warning.png" height="75px" width="75px" style=" position: absolute; left: 93%;top:25%;">
+		<p id="warningmessage" style="color: red; position: absolute; left: 87%;top:35%;">Polyhouse Door Open!</p>
+		
+	    <div id="chart" style="position:absolute;left:30%;top:23%"></div>
+	    <script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+	    <script  src="js/pb.js"></script>
+
+		<div style="position: absolute;left: 43%; top:45%">
+		<img src="img/plant icon.png" width="250px" height="250px" ><br>
+		<p id="health" style="position: absolute; left: 22%; top:85%;"><i><strong> Feeling week today!</strong></i></p>
+		<button  style="width: 60%;position: absolute;left: 20%; background: #77C08A; padding: 8px;border:black solid; " type="submit"><span style="font-weight: bold; color: black;">Details</span></button>
+		</div>
+		<img src="img/report.png" height="75px" width="75px" style="position:absolute;left:93%;top:70% ;" >
+		<img src="img/chat.png" height="75px" width="75px" style=" position: absolute;left:93%;top:80% ;">
+		<div class="footer">
+			<div style="width: 70%; margin: auto;">
+				<span style="font-weight: bold;font-size: 20px; color: #38C855">Germination<span style="font-weight: bold;font-size: 20px; margin-left: 850px;color:black;">Harvest</span></span>
+				
+					<ul class="timeline" id="timeline">
+		  				<li class="li complete">
+		    				<div class="timestamp">
+		    				</div>
+		  				</li>
+						<li class="li complete">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 2 </h5>
+						    </div>
+						</li>
+						<li class="li complete">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 4 </h5>
+						    </div>
+						</li>
+						<li class="li complete">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 6 </h5>
+						    </div>
+						</li>
+						<li class="li">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 8 </h5>
+						    </div>
+						</li>
+						<li class="li">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 10 </h5>
+						    </div>
+						</li>
+						<li class="li">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 12 </h5>
+						    </div>
+						</li>
+		 			</ul>
+			</div>
+		</div>
+</body>
+</html>

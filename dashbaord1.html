@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<style type="text/css">
+ 
+
+					.mySlides {display:none}
+					.w3-left, .w3-right, .w3-badge {cursor:pointer ;}
+					.w3-badge {height:13px;width:13px;padding:0; left: 10px;}
+
+					  .timeline {
+					  	margin-left: 90px;
+					  list-style-type: none;
+					  display: flex;
+					}
+
+					.li {
+					  transition: all 200ms ease-in;
+					}
+
+					.status {
+					  padding: 0px 40px;
+					  display: flex;
+					  justify-content: center;
+					  border-top: 2px solid #D6DCE0;
+					  position: relative;
+					  transition: all 200ms ease-in;
+					}
+					.status h5 {
+					  font-weight: 600;
+					}
+					.status:before {
+					  content: "";
+					  width: 25px;
+					  height: 25px;
+					  background-color: #959E9E;
+					  border-radius: 25px;
+					  border: 1px solid #ddd;
+					  position: absolute;
+					  top: -15px;	
+					  left: 40%;
+					  transition: all 200ms ease-in;
+					}
+
+					.li.complete .status {
+					  border-top: 2px solid #66DC71;
+					}
+					.li.complete .status:before {
+					  background-color: #66DC71;
+					  border: none;
+					  transition: all 200ms ease-in;
+					}
+					.li.complete .status h5 {
+					  color: #66DC71;
+					}
+					.footer{
+						position: fixed;
+					   left: 0;
+					   bottom: 0;
+					   width: 100%;
+					   background-color: #97EFEF;
+					   color: black;
+					}
+					.tab {
+						   position: relative;
+						    overflow: hidden;
+						    border: 1px solid #ccc;
+						    background-color: #97EFEF;
+						}
+						.tab button {
+						   position: relative;
+						   left:20%;
+						    background-color: #97EFEF;
+						    float: left;
+						    border: none;
+						    outline: none;
+						    cursor: pointer;
+						    padding: 14px 60px;
+						    transition: 0.3s;
+						    font-size: 17px;
+						}
+						.tab button:hover {
+						    background-color: #97EFEF;
+						}
+						.tab button.active {
+						    background-color: green;
+						    color:white	;
+						}
+						.tabcontent {
+							position: relative;
+						    display: none;
+						    padding: 6px 12px;
+						    
+						}
+
+					
+	</style>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700,500'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+					
+</head>
+<body>
+		<header style="position: relative;left: 0;top: 0;">
+			<img src="img/profile.png" height="60px" width="60px" style="margin-left: 93%;margin-top: 7%; position: absolute;">
+			<img src="img/notification.png" height="60px" width="60px" style="margin-left: 89%;margin-top: 7%; position: absolute;">
+			<img src="img/poly with circle.png" height="60px" width="60px" style="margin-left: 85%;margin-top: 7%; position: absolute;">
+			<img src="img/TOP BAND.png" height="180px" width="101.3%" style="margin-left: -10px;margin-top: -20px;">
+		</header>
+		<script type="text/javascript" src="js/pb.js"></script>
+		<div class="tab">
+		  <button class="tablinks" onclick="openCity(event, 'atmos')">ATMOSPHERE</button>
+		  <button class="tablinks" onclick="openCity(event, 'ref')">REFRIGERATION SYSTEM</button>
+		  <button class="tablinks" onclick="openCity(event, 'cam')">CAMERA</button>
+		</div>
+		<div id="atmos" class="tabcontent">
+		  <h3>London</h3>
+		  <p>London is the capital city of England.</p>
+		</div>
+
+		<div id="ref" class="tabcontent">
+		  <h3>Paris</h3>
+		  <p>Paris is the capital of France.</p> 
+		</div>
+
+		<div id="cam" class="tabcontent">
+		  <h3>Tokyo</h3>
+		  <p>Tokyo is the capital of Japan.</p>
+		</div>
+		<img src="img/warning.png" height="75px" width="75px" style=" position: absolute; left: 93%;top:27%;">
+		<p id="warningmessage" style="color: red; position: absolute; left: 87%;top:35%;">Polyhouse Door Open!</p>
+		
+	   <img src="img/report.png" height="75px" width="75px" style="position:absolute;left:93%;top:70% ;" >
+		<img src="img/chat.png" height="75px" width="75px" style=" position: absolute;left:93%;top:80% ;">
+		<div class="footer">
+			<div style="width: 70%; margin: auto;">
+				<span style="font-weight: bold;font-size: 20px; color: #38C855">Germination<span style="font-weight: bold;font-size: 20px; margin-left: 850px;color:black;">Harvest</span></span>
+				
+					<ul class="timeline" id="timeline">
+		  				<li class="li complete">
+		    				<div class="timestamp">
+		    				</div>
+		  				</li>
+						<li class="li complete">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 2 </h5>
+						    </div>
+						</li>
+						<li class="li complete">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 4 </h5>
+						    </div>
+						</li>
+						<li class="li complete">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 6 </h5>
+						    </div>
+						</li>
+						<li class="li">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 8 </h5>
+						    </div>
+						</li>
+						<li class="li">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 10 </h5>
+						    </div>
+						</li>
+						<li class="li">
+						    <div class="timestamp">
+						    </div>
+						    <div class="status">
+						      <h5> Week 12 </h5>
+						    </div>
+						</li>
+		 			</ul>
+			</div>
+		</div>
+</body>
+</html>
